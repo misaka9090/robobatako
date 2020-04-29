@@ -29,7 +29,7 @@ citycodes = {
     "広島": '340010',
     "福岡": '400010',
     "鹿児島": '460010',
-    "那覇": '471010'
+    "那覇": '471010',
 }
 
 
@@ -45,8 +45,8 @@ async def on_message(message):
            msg2 = message.author.mention + "失せないで"
            print(msg2)
            await message.channel.send(msg2)
-       if message.content == "らしい":
-           msg3 = message.author.mention + " 興味ないね"
+       if message.content == "ロボばたこ、エチオピアの天気は？":
+           msg3 = message.author.mention + " 興味ないから"
            print(msg3)
            await message.channel.send(msg3)
        reg_res = re.compile(u"ロボばたこ、(.+)の天気は？").search(message.content)
@@ -66,6 +66,4 @@ async def on_message(message):
           await message.channel.send(message.author.mention + msg9)
 
         else:
-          await message.channel.send("そこの天気はわかりません...")  
-
-client.run("Mzk3MjczNTU0NTM5NzczOTUy.XqfIXQ.0KI7GZee27XY6gGcIl2WGrKudSc")
+          await message.channel.send("そこの天気はわかりません")  
